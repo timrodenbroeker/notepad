@@ -21,8 +21,12 @@ $(document).ready(function(){
 
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { // escape key maps to keycode `27`
-	    $('.hamburger').removeClass("isActive");		  
-	    $('#navOverlayWrapper').removeClass('isActive');
+	    $('.hamburger').toggleClass("isActive");		  
+	    $('#navOverlayWrapper').toggleClass('isActive');
+    }
+    
+     if (e.keyCode == 79) { // 'O'
+	    $('.thumb').slideToggle();		  
     }
 });
 

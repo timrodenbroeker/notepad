@@ -13,6 +13,11 @@ body,p {
 	font-weight: 400;	
 }
 
+
+code {
+	font-size: 16px;		
+}
+
 .blue {
 	color: blue;
 }
@@ -24,9 +29,21 @@ body,p {
 	font-weight: 400;
 }
 
-h1,h2,h3,h4,h5 {
+.single h1,
+.single h2,
+.single h3,
+.single h4,
+.single h5 {
 	color: blue;	
+}
+
+h1,h2,h3,h4,h5 {
+	color: crimson;	
 	display: inline;
+}
+
+.title h2 {
+
 }
 
 .date h2,
@@ -34,17 +51,24 @@ h1,h2,h3,h4,h5 {
 	color: lightgrey;
 }
 
-.lightblue {
-	color: CornflowerBlue;
+.solved {
+	color: blue;
 }
 
-a {
-	color: blue;
+.lightblue {
+	color: lightgrey;
+}
+
+p a, 
+p a:hover, 
+p a:focus, 
+p a:visited {
+	color: Crimson;
 }
 
 a:hover,
 a:hover h2 {
-	color: red;
+	color: blue;
 }
 
 #navbar {
@@ -95,7 +119,9 @@ a:visited {
 }
 
 .thumb {
-	max-width: 200px;
+	max-width: 400px;
+	display: none;
+	margin-bottom: 25px;
 }
 
 @media (max-width: 768px){
@@ -133,21 +159,18 @@ code {
 	}
 	
 	#navOverlay {
+		padding: 15px;
 		width: 100%;
 		height: 100vh;
 		background: blue;
 		display: flex;
-			flex-direction: column;		
+		flex-direction: column;		
 	}
 
 
 	
 	#navOverlay div {
-		flex-grow: 1;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		
+			
 	}
 	
 	#navOverlay a {
@@ -156,10 +179,10 @@ code {
 	
 	#navOverlayWrapper {
 		z-index: 10030;		
-		width: 100%;
+		width: 30%;
 		height: 100vh;
 		position: fixed;
-		left: -110vw;
+		left: -30vw;
 		top: 0;
 	}
 	
@@ -211,4 +234,12 @@ code {
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
 	transition: all 500ms ease;		
+}
+
+.linkedWrapper {
+
+}
+
+.mono {
+	font-family: "Roboto Mono", sans-serif !important;
 }

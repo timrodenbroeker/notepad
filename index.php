@@ -15,7 +15,7 @@
 			</div>
 			<div class="col-sm-9 title">
 				<a href="<?php the_permalink(); ?>">
-					 <h2<?php if ( in_category('external') ) { echo ' class="lightblue"';} else if ( in_category('solved') ) { echo ' class="lightgrey"';}?>><?php the_title(); ?></h2>
+					 <h2<?php if ( in_category('external') ) { echo ' class="lightblue"';} else if ( in_category('solved') ) { echo ' class="solved"';}?>><?php the_title(); ?></h2>
 				</a>
 				<?php if ( has_post_thumbnail() ) { ?>
 					<div class="mtop15 thumb mbot15"><?php the_post_thumbnail(); ?></div>
@@ -30,6 +30,21 @@
 	} // end if
 	?>
 	
+		<div class="container mbot10">
+		<div class="row">	
+					
+			<div class="col-sm-9 col-sm-offset-3">
+				
+			<?php the_posts_pagination( array(
+	 'mid_size' => 100,
+	 'prev_text' => __( '<span class="">prev</span>', 'textdomain' ),
+	 'next_text' => __( '<span class="">next</span>', 'textdomain' ),
+	) ); ?>
+	
+			</div></div>	
+		</div>
+	
+
 	<?php get_footer(); ?>
 
 </div>

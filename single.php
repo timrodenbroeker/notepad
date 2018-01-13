@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="content">
+<div id="content" class="single">
 
 	<?php 
 	if ( have_posts() ) {
@@ -14,7 +14,15 @@
 			</div>
 			<div class="col-sm-7 title">
 				<h2><?php the_title(); ?></h2>
-				<div class="mtop15"><?php the_content(); ?></div>
+				<div class="mtop15">
+					<?php
+					$thecontent = get_the_content();
+					if(!empty($thecontent)) { ?>
+						<?php echo $thecontent; ?>
+					<?php } else { ?> 
+						<p>Nothing here yet</p>
+					<?php } ?>
+					<p class="mtop50"><?php echo edit_post_link(); ?></p>
 			</div>
 		</div>
 	</div>
